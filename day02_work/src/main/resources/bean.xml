@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--第一题配置文件-->
+    <bean id="manager" class="com.xzit.model.BathManager">
+        <property name="name" value="浴池管理员-王大爷"></property>
+        <property name="students">
+            <list>
+                <ref bean="stu_a"></ref>
+                <ref bean="stu_b"></ref>
+                <ref bean="stu_c"></ref>
+                <ref bean="stu_d"></ref>
+            </list>
+        </property>
+    </bean>
+    <bean id="stu_a" class="com.xzit.model.Student">
+        <property name="name" value="张三"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+    <bean id="stu_b" class="com.xzit.model.Student">
+        <property name="name" value="男"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+    <bean id="stu_c" class="com.xzit.model.Student">
+        <property name="name" value="王五"></property>
+        <property name="gender" value="女"></property>
+    </bean>
+    <bean id="stu_d" class="com.xzit.model.Student">
+        <property name="name" value="赵六"></property>
+        <property name="gender" value="女"></property>
+    </bean>
+    <!--第二题配置-->
+    <bean id="libraryManager" class="com.xzit.model.LibraryManager">
+        <property name="name" value="图书管理员-王维"></property>
+        <property name="readers">
+            <list>
+                <ref bean="reader_a"></ref>
+                <ref bean="reader_b"></ref>
+                <ref bean="reader_c"></ref>
+                <ref bean="reader_d"></ref>
+            </list>
+        </property>
+    </bean>
+    <bean id="reader_a" class="com.xzit.model.Reader">
+        <property name="name" value="张三"></property>
+        <property name="card" value="红色A类"></property>
+    </bean>
+    <bean id="reader_b" class="com.xzit.model.Reader">
+        <property name="name" value="李四"></property>
+        <property name="card" value="蓝色A类"></property>
+    </bean>
+    <bean id="reader_c" class="com.xzit.model.Reader">
+        <property name="name" value="王五"></property>
+        <property name="card" value="红色B类"></property>
+    </bean>
+    <bean id="reader_d" class="com.xzit.model.Reader">
+        <property name="name" value="赵六"></property>
+        <property name="card" value="蓝色B类"></property>
+    </bean>
+
+</beans>
