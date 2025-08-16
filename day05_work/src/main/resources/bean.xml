@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="tourist1" class="com.xzit.aop.Tourist" p:name="张三" p:start="武汉" p:end="长沙"></bean>
+    <bean id="tourist2" class="com.xzit.aop.Tourist" p:name="张三" p:start="北京" p:end="长沙"></bean>
+    <bean id="travelVal" class="com.xzit.aop.TravelVal"></bean>
+
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <context:component-scan base-package="com.xzit"></context:component-scan>
+    <context:property-placeholder location="classpath:dangerousArea.properties"  file-encoding="UTF-8"/>
+
+</beans>
