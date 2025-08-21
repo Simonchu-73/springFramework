@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--对数据库环境的配置整合在Spring中，即在mybatis全局配置文件中就不需要配置数据库了-->
+<!--    <environments default="">
+        <environment id="">
+            <transactionManager type=""></transactionManager>
+            <dataSource type=""></dataSource>
+        </environment>
+    </environments>-->
+    <!--配置model类的别名-->
+    <typeAliases>
+        <package name="com.xzit.model"/>
+    </typeAliases>
+    <!--配置mapper类的别名-->
+    <mappers>
+        <package name="com.xzit.mapper"/>
+    </mappers>
+</configuration>
